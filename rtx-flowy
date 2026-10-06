@@ -37,13 +37,13 @@ cc.Brightness = -0.02
 
 local rays = Instance.new("SunRaysEffect", Lighting)
 rays.Intensity = 6.5
-rays.Spread = 9.5
+rays.Spread = 15.5
 
 
 for _, v in pairs(Workspace:GetDescendants()) do
     if v:IsA("BasePart") or v:IsA("MeshPart") then
        
-        if v.Reflectance < 0.1 then
+        if v.Reflectance < 0.10 then
             v.Reflectance = 0.90 
         end
         v.CastShadow = true
