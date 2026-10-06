@@ -37,7 +37,7 @@ cc.Brightness = -0.02
 
 local rays = Instance.new("SunRaysEffect", Lighting)
 rays.Intensity = 6.5
-rays.Spread = 3.5
+rays.Spread = 9.5
 
 
 for _, v in pairs(Workspace:GetDescendants()) do
