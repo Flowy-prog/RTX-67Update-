@@ -30,7 +30,7 @@ dof.NearIntensity = 4.0
 
 
 local cc = Instance.new("ColorCorrectionEffect", Lighting)
-cc.Contrast = 0.20 
+cc.Contrast = 0.30 
 cc.Saturation = 2.50 
 cc.Brightness = -0.02
 
