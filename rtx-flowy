@@ -19,14 +19,14 @@ Lighting.ExposureCompensation = 0.6
 local bloom = Instance.new("BloomEffect", Lighting)
 bloom.Intensity = 5.0
 bloom.Size = 40 
-bloom.Threshold = 2.5
+bloom.Threshold = 3.5
 
 
 local dof = Instance.new("DepthOfFieldEffect", Lighting)
-dof.FarIntensity = 3.0
-dof.FocusDistance = 7 
-dof.InFocusRadius = 10
-dof.NearIntensity = 3.0
+dof.FarIntensity = 6.0
+dof.FocusDistance = 9.5 
+dof.InFocusRadius = 20
+dof.NearIntensity = 4.0
 
 
 local cc = Instance.new("ColorCorrectionEffect", Lighting)
