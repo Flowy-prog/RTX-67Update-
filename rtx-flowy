@@ -1,0 +1,51 @@
+local Lighting = game:GetService("Lighting")
+local Workspace = game:GetService("Workspace")
+
+
+for _, v in pairs(Lighting:GetChildren()) do
+    if v:IsA("PostProcessEffect") or v:IsA("DepthOfFieldEffect") or v:IsA("BlurEffect") then 
+        v:Destroy() 
+    end
+end
+
+
+Lighting.Technology = Enum.Technology.Future
+Lighting.Brightness = 1.0 -- Matahari tetep adem
+Lighting.EnvironmentDiffuseScale = 0.2
+Lighting.EnvironmentSpecularScale = 1 
+Lighting.ExposureCompensation = 0.6
+
+
+local bloom = Instance.new("BloomEffect", Lighting)
+bloom.Intensity = 2.0
+bloom.Size = 28 
+bloom.Threshold = 0.5 
+
+
+local dof = Instance.new("DepthOfFieldEffect", Lighting)
+dof.FarIntensity = 0.85 
+dof.FocusDistance = 7 
+dof.InFocusRadius = 10
+dof.NearIntensity = 0.1
+
+
+local cc = Instance.new("ColorCorrectionEffect", Lighting)
+cc.Contrast = 0.3 
+cc.Saturation = 0.15 
+cc.Brightness = -0.01
+
+
+local rays = Instance.new("SunRaysEffect", Lighting)
+rays.Intensity = 0.05
+rays.Spread = 0.5
+
+
+for _, v in pairs(Workspace:GetDescendants()) do
+    if v:IsA("BasePart") or v:IsA("MeshPart") then
+       
+        if v.Reflectance < 0.1 then
+            v.Reflectance = 0.12 
+        end
+        v.CastShadow = true
+    end
+end
