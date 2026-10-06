@@ -44,7 +44,7 @@ for _, v in pairs(Workspace:GetDescendants()) do
     if v:IsA("BasePart") or v:IsA("MeshPart") then
        
         if v.Reflectance < 0.1 then
-            v.Reflectance = 0.10 
+            v.Reflectance = 0.90 
         end
         v.CastShadow = true
     end
