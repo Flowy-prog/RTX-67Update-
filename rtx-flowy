@@ -19,32 +19,32 @@ Lighting.ExposureCompensation = 0.6
 local bloom = Instance.new("BloomEffect", Lighting)
 bloom.Intensity = 3.0
 bloom.Size = 28 
-bloom.Threshold = 0.7
+bloom.Threshold = 0.9
 
 
 local dof = Instance.new("DepthOfFieldEffect", Lighting)
 dof.FarIntensity = 0.95
 dof.FocusDistance = 7 
 dof.InFocusRadius = 10
-dof.NearIntensity = 0.1
+dof.NearIntensity = 1.0
 
 
 local cc = Instance.new("ColorCorrectionEffect", Lighting)
-cc.Contrast = 0.3 
+cc.Contrast = 0.5 
 cc.Saturation = 0.15 
 cc.Brightness = -0.01
 
 
 local rays = Instance.new("SunRaysEffect", Lighting)
-rays.Intensity = 0.20
-rays.Spread = 1.0
+rays.Intensity = 0.30
+rays.Spread = 2.0
 
 
 for _, v in pairs(Workspace:GetDescendants()) do
     if v:IsA("BasePart") or v:IsA("MeshPart") then
        
         if v.Reflectance < 0.1 then
-            v.Reflectance = 0.12 
+            v.Reflectance = 0.15 
         end
         v.CastShadow = true
     end
