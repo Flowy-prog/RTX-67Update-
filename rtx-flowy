@@ -17,13 +17,13 @@ Lighting.ExposureCompensation = 0.6
 
 
 local bloom = Instance.new("BloomEffect", Lighting)
-bloom.Intensity = 2.0
+bloom.Intensity = 3.0
 bloom.Size = 28 
-bloom.Threshold = 0.5 
+bloom.Threshold = 0.7
 
 
 local dof = Instance.new("DepthOfFieldEffect", Lighting)
-dof.FarIntensity = 0.85 
+dof.FarIntensity = 0.95
 dof.FocusDistance = 7 
 dof.InFocusRadius = 10
 dof.NearIntensity = 0.1
@@ -36,8 +36,8 @@ cc.Brightness = -0.01
 
 
 local rays = Instance.new("SunRaysEffect", Lighting)
-rays.Intensity = 0.05
-rays.Spread = 0.5
+rays.Intensity = 0.20
+rays.Spread = 1.0
 
 
 for _, v in pairs(Workspace:GetDescendants()) do
