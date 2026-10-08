@@ -31,12 +31,12 @@ dof.NearIntensity = 0.1
 
 local cc = Instance.new("ColorCorrectionEffect", Lighting)
 cc.Contrast = 0.3 
-cc.Saturation = 0.30 
+cc.Saturation = 0.40 
 cc.Brightness = -0.02
 
 
 local rays = Instance.new("SunRaysEffect", Lighting)
-rays.Intensity = 0.05
+rays.Intensity = 0.10
 rays.Spread = 0.5
 
 
